@@ -30,9 +30,7 @@ class Puppet {
       headless: false,
       args: [],
       customConfig: {
-        // chromePath: "C:/Program Files/Google/Chrome/Application/chrome.exe",
-        chromePath: "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
-        //userDataDir: "F:\\C\\development\\indeed_bot\\Code\\SearchApply\\ChromeProfiles\\Indeed20250528"
+        chromePath: process.env.CHROMEPATH,
         userDataDir: process.env.USRDIR
       },
       fingerprint: true,
@@ -54,14 +52,6 @@ class Puppet {
     await this.setFreshPages();
 
     return;
-  }
-
-  getActivePage() {
-    return this.page;
-  }
-
-  getBrowser() {
-    return this.browser;
   }
 
   /** disconnects & resets the singleton so you can re-init later if needed */
@@ -124,6 +114,14 @@ class Puppet {
 
     this.page    = startPage;
     this.pidPage = pidPage;
+  }
+
+  getActivePage() {
+    return this.page;
+  }
+
+  getBrowser() {
+    return this.browser;
   }
 }
 

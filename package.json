@@ -3,19 +3,28 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
+  "imports": {
+    "#puppet/*": "./Puppet/*"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
-    "imports": {
-    "#puppet/*": "./Puppet/*"
-  },
   "dependencies": {
     "dotenv": "^16.5.0",
     "puppeteer-real-browser": "^1.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "babel-jest": "^30.0.2",
+    "jest": "^30.0.2"
+  },
+  "jest": {
+    "transform": {}
   }
 }

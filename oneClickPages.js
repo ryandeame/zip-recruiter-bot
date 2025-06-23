@@ -6,76 +6,9 @@ export default async function oneClickPages() {
 
     const page = puppet.getActivePage();
 
-    // const oneClickBtnSel = 'span#job_apply_button_portal_target button';
-
-    // const oneClickBtn = await page.waitForSelector(oneClickBtnSel);
-  
-    // await oneClickBtn.click();
-
     return;
 
 }
-
-
-
-// page.on('response', async (response) => {
-//   const url = response.url();
-//   if (url.includes('/your-question-endpoint')) { // Replace with actual endpoint substring
-//     try {
-//       const data = await response.json();
-//       // Now you can access data.questionAnswerGroup.questions, etc.
-//       console.log('Questions:', data.questionAnswerGroup.questions);
-//     } catch (e) {
-//       console.error('Failed to parse response:', e);
-//     }
-//   }
-// });
-
-
-
-// const questionTypes = [
-//     {
-//         "name": "questions",
-        
-//     }
-// ]
-
-// ZipRecruiter seems to do a per page response with all question data
-
-// Example: 
-// {
-//     "group": 1,
-//     "totalGroups": 6,
-//     "totalQuestions": 6,
-//     "status": "SCREENING_QUESTIONS",
-//     "questionAnswerGroup": {
-//         "questions": [
-//             {
-//                 "order": 1,
-//                 "id": "864245953",
-//                 "question": {
-//                     "options": [
-//                         {
-//                             "label": "Yes",
-//                             "value": "1",
-//                             "ordinal": 1
-//                         },
-//                         {
-//                             "ordinal": 2,
-//                             "label": "No",
-//                             "value": "2"
-//                         }
-//                     ],
-//                     "order": 1,
-//                     "id": "864245953",
-//                     "text": "Are you authorized to work in the U.S.?",
-//                     "type": "radioButton"
-//                 }
-//             }
-//         ],
-//         "group": 1
-//     }
-// }
 
 // --- Logic Explanation: Automated Question Answering with Puppet ---
 //

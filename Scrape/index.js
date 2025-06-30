@@ -40,9 +40,7 @@ async function main() {
 }
 
 class JobPosts {
-    constructor() {
-        this.jobPosts = [];
-    }
+    constructor() {}
 
     async getJobs(page, searchTerm, pageNumber) {
         const jobResultsSelector = "div.job_result_two_pane";

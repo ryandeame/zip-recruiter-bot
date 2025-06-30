@@ -112,6 +112,8 @@ class Puppet {
       d.type() === "beforeunload" && d.accept()
     );
 
+    await startPage.bringToFront();
+
     this.page    = startPage;
     this.pidPage = pidPage;
   }

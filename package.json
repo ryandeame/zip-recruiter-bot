@@ -9,13 +9,15 @@
   },
   "scripts": {
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "scrape": "node ./Scrape/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.5.0",
+    "jsdom": "^26.1.0",
     "puppeteer-real-browser": "^1.4.2"
   },
   "devDependencies": {
